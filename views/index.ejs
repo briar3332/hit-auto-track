@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hit Auto Track</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Hit Auto Track</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Plate</th>
+          <th>VIN</th>
+          <th>State</th>
+          <th>Timestamp</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (vehicles && vehicles.length > 0) { %>
+          <% vehicles.forEach(function(vehicle) { %>
+            <tr>
+              <td><%= vehicle.plate || 'N/A' %></td>
+              <td><%= vehicle.vin || 'N/A' %></td>
+              <td><%= vehicle.state || 'N/A' %></td>
+              <td><%= vehicle.timestamp || 'N/A' %></td>
+              <td><%= vehicle.status || 'N/A' %></td>
+            </tr>
+          <% }) %>
+        <% } else { %>
+          <tr>
+            <td colspan="5">No vehicle data found.</td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
