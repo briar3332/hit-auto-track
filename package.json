@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "basic-auth": "^2.0.1",
+    "bcrypt": "^6.0.0",
     "dotenv": "^17.0.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
